@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-29 00:56:55
+/* Smarty version 3.1.33, created on 2019-10-29 03:47:28
   from 'D:\xampp\htdocs\htdocs\MayoristaRopa\templates\products.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5db7804763a070_30799520',
+  'unifunc' => 'content_5db7a840936387_74391931',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9c45298763cfe2bb8e6285be52d8108f7c780dfd' => 
     array (
       0 => 'D:\\xampp\\htdocs\\htdocs\\MayoristaRopa\\templates\\products.tpl',
-      1 => 1572307011,
+      1 => 1572317247,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5db7804763a070_30799520 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5db7a840936387_74391931 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
     <div class="container">  
@@ -34,10 +34,9 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['product']->value) {
 ?>
-                echo 
                     <li class="list-group-item"><?php echo $_smarty_tpl->tpl_vars['product']->value->name;?>
- --- <?php echo $_smarty_tpl->tpl_vars['product']->value->id_producto;?>
-<a href='product/<?php echo $_smarty_tpl->tpl_vars['product']->value->id_producto;?>
+ ---<?php echo $_smarty_tpl->tpl_vars['product']->value->nameCategoria;?>
+ <a href='product/<?php echo $_smarty_tpl->tpl_vars['product']->value->id_producto;?>
 '>Ver mas</a></li>
                 <?php
 }

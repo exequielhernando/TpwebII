@@ -7,7 +7,7 @@
                 <li class="list-group-item">{$Product->price}</li>
                 <li class="list-group-item">{$Product->stock}</li>
                 <li class="list-group-item">{$Product->image}</li>
-                <li class="list-group-item">{$Product->id_categoria}</li>
+                <li class="list-group-item">{$Product->nameCategoria}</li>
                 <li class="list-group-item"><button type="button" class="btn btn-success"><a href="editpruduct/{$Product->id_producto}">Edit product</a></button></li>
                 <li class="list-group-item"><button type="button" class="btn btn-danger"><a href="deletepruduct/{$Product->id_producto}">Delete product</a></button></li>
             </ul>

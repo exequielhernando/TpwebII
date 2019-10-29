@@ -36,7 +36,7 @@ class ProductsController {
     public function GetProduct($param){
         // $this->checkLogIn();
         $id_product = $param[0];
-        $product = $this->model->GetProduct($param);
+        $product = $this->model->GetProduct($id_product);
         $this->view->ShowProduct($product);
     }
     public function InsertProduct(){

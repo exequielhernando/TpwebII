@@ -9,18 +9,17 @@ class ProductsModel{
         return new PDO('mysql:host=localhost;'.'dbname=mayoristaropa;charset=utf8', 'root', '');
     }
     public function GetProducts(){
-        $sentencia = $this->db->prepare( "select * from producto");
+        $sentencia = $this->db->prepare( "select p.*, c.name as nameCategoria from producto p join categoria c on p.id_categoria = c.id_coategria");
         $sentencia->execute();
         $products = $sentencia->fetchAll(PDO::FETCH_OBJ);
         
         return $products;
     }
     public function GetProduct($id){
-        echo $id;
-        $sentencia = $this->db->prepare( "select * from producto where id=?");
+        $sentencia = $this->db->prepare( "select p.*, c.name as nameCategoria from producto p join categoria c on p.id_categoria = c.id_categoria where id_producto = ?");
         $sentencia->execute([$id]);
         $product = $sentencia->fetch(PDO::FETCH_OBJ);
-        
+
         return $product;
     }
     public function InsertProduct($name,$description,$price,$stock,$image,$id_category){
